@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Users,
+  Brain,
   Briefcase,
   AlertTriangle,
   Network,
@@ -76,6 +77,39 @@ export function DashboardPage() {
             <Sparkles className="w-4 h-4" />
             <span>Explore All AI Insights</span>
           </button>
+        </div>
+      </div>
+
+      {/* Featured Hackathon Innovation: WorkMind Decision Twin */}
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-navy-950 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden border border-indigo-900/60">
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-brand-600/10 to-transparent pointer-events-none" />
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-400/30 flex items-center gap-1.5">
+                <Brain className="w-3.5 h-3.5 text-brand-400" />
+                Featured Innovation • Google Gemini Engine
+              </span>
+              <span className="text-[10px] text-slate-400">Advisory Scenario Simulator</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
+              WorkMind — Decision Twin
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Stress-test critical workplace dilemmas before enacting policy changes. Simulate short-term vs. long-term trajectories, qualitative impact scales, unintended hazards, and "What If?" counter-factuals.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+            <button
+              onClick={() => navigate('/decision-twin')}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-500 hover:from-brand-600 hover:to-indigo-600 text-white text-xs font-extrabold shadow-lg shadow-brand-500/30 transition-all hover:scale-[1.02]"
+            >
+              <Brain className="w-4 h-4" />
+              <span>Launch Decision Simulator</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
 

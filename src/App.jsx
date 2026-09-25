@@ -20,6 +20,7 @@ import ActionCenterPage from './pages/ActionCenterPage';
 import DataSourcesPage from './pages/DataSourcesPage';
 import ReportsPage from './pages/ReportsPage';
 import SettingsPage from './pages/SettingsPage';
+import DecisionTwinPage from './pages/DecisionTwinPage';
 
 export function App() {
   return (
@@ -31,6 +32,7 @@ export function App() {
       {/* Authenticated SaaS Dashboard Layout */}
       <Route element={<AppLayout />}>
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/decision-twin" element={<DecisionTwinPage />} />
         <Route path="/recruitment" element={<RecruitmentPage />} />
         <Route path="/employees" element={<EmployeesPage />} />
         <Route path="/employees/:id" element={<EmployeeDetailPage />} />

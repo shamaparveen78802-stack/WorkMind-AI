@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard,
+  Brain,
   UserPlus,
   Users,
   UserCheck,
@@ -24,6 +25,7 @@ import {
 export function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) {
   const navItems = [
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+    { name: 'Decision Twin', path: '/decision-twin', icon: Brain, badge: 'GEMINI', highlight: true },
     { name: 'Recruitment', path: '/recruitment', icon: UserPlus, badge: '8' },
     { name: 'Employees', path: '/employees', icon: Users },
     { name: 'Onboarding', path: '/onboarding', icon: UserCheck, badge: '4' },
@@ -102,8 +104,10 @@ export function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) 
                   <span>{item.name}</span>
                   {item.badge && (
                     <span
-                      className={`text-[10px] font-bold px-1.5 py-0.2 rounded-full ${
-                        item.alert
+                      className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded-full ${
+                        item.highlight
+                          ? 'bg-gradient-to-r from-brand-500 to-indigo-500 text-white shadow-sm'
+                          : item.alert
                           ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
                           : item.action
                           ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
